@@ -683,6 +683,10 @@ class Raven_Client
             }
         }
 
+        if ($data['level'] === self::INFO) {
+          return null;
+        }
+
         return $this->capture($data, $trace, $vars);
     }
 
