@@ -89,13 +89,13 @@ class Raven_ErrorHandler
 
         $this->lastHandledException = $e;
 
-        if (!$isError && $this->call_existing_exception_handler) {
-            if ($this->old_exception_handler !== null) {
-                call_user_func($this->old_exception_handler, $e);
-            } else {
-                throw $e;
-            }
-        }
+//        if (!$isError && $this->call_existing_exception_handler) {
+//            if ($this->old_exception_handler !== null) {
+//                call_user_func($this->old_exception_handler, $e);
+//            } else {
+//                throw $e;
+//            }
+//        }
     }
 
     public function handleError($type, $message, $file = '', $line = 0, $context = array())
